@@ -1,0 +1,93 @@
+2021-01-22 03:41:42,321 Namespace(cfg='experiments/mpii/nasnet/nasnet_256x256_d256x3_adam_lr1e-3_efficientpose-a.yaml', dataDir='', logDir='', modelDir='', opts=[], prevModelDir='')
+2021-01-22 03:41:42,321 AUTO_RESUME: False
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: False
+  ENABLED: True
+DATASET:
+  COLOR_RGB: True
+  DATASET: mpii
+  DATA_FORMAT: jpg
+  FLIP: True
+  HYBRID_JOINTS_TYPE: 
+  NUM_JOINTS_HALF_BODY: 8
+  PROB_HALF_BODY: -1.0
+  ROOT: data/mpii/
+  ROT_FACTOR: 30
+  SCALE_FACTOR: 0.25
+  SELECT_DATA: False
+  TEST_SET: valid
+  TRAIN_SET: train
+DATA_DIR: 
+DEBUG:
+  DEBUG: True
+  SAVE_BATCH_IMAGES_GT: True
+  SAVE_BATCH_IMAGES_PRED: True
+  SAVE_HEATMAPS_GT: True
+  SAVE_HEATMAPS_PRED: True
+GPUS: (0,)
+LOG_DIR: log
+LOSS:
+  TOPK: 8
+  USE_DIFFERENT_JOINTS_WEIGHT: False
+  USE_OHKM: False
+  USE_TARGET_WEIGHT: True
+MODEL:
+  ARCH: EfficientPose-B
+  EXTRA:
+    DECONV_WITH_BIAS: False
+    FINAL_CONV_KERNEL: 1
+    NUM_DECONV_FILTERS: [64, 32]
+    NUM_DECONV_KERNELS: [4, 4]
+    NUM_DECONV_LAYERS: 2
+  HEATMAP_SIZE: [64, 64]
+  IMAGE_SIZE: [256, 256]
+  INIT_WEIGHTS: True
+  IN_CHANNELS: 24
+  NAME: pose_efficient
+  NUM_CLASSES: 1000
+  NUM_JOINTS: 16
+  PRETRAINED: 
+  SIGMA: 2
+  TAG_PER_JOINT: True
+  TARGET_TYPE: gaussian
+OUTPUT_DIR: output
+PIN_MEMORY: True
+PRINT_FREQ: 100
+RANK: 0
+TEST:
+  BATCH_SIZE_PER_GPU: 64
+  BBOX_THRE: 1.0
+  COCO_BBOX_FILE: 
+  FLIP_TEST: True
+  IMAGE_THRE: 0.0
+  IN_VIS_THRE: 0.2
+  MODEL_FILE: /home/zwq/workspace/Pose/model_checkpoint/mpii/PoseNAS-B/final_state.pth
+  NMS_THRE: 1.0
+  OKS_THRE: 0.9
+  POST_PROCESS: True
+  SHIFT_HEATMAP: True
+  SOFT_NMS: False
+  USE_GT_BBOX: True
+TRAIN:
+  BATCH_SIZE_PER_GPU: 64
+  BEGIN_EPOCH: 0
+  CHECKPOINT: 
+  END_EPOCH: 200
+  FNA: True
+  GAMMA1: 0.99
+  GAMMA2: 0.0
+  LR: 0.001
+  LR_FACTOR: 0.1
+  LR_STEP: [150, 170]
+  MOMENTUM: 0.9
+  NESTEROV: False
+  OPTIMIZER: adam
+  RESUME: False
+  SHUFFLE: True
+  WD: 0.0001
+WORKERS: 4
+2021-01-22 03:41:42,326 Building model with arch {'block_op_type': [['ir_k3_e6'], ['ir_k3_e6'], ['ir_k5_e3'], ['ir_k7_e3'], ['ir_k5_e3'], ['ir_k7_e3'], ['ir_k5_e6'], ['ir_k5_e3'], ['ir_k7_e3'], ['ir_k7_e3'], ['ir_k7_e3'], ['ir_k7_e3'], ['ir_k7_e3'], ['ir_k7_e3'], ['ir_k7_e6'], ['ir_k5_e6'], ['ir_k5_e6'], ['ir_k7_e3'], ['ir_k7_e3'], ['ir_k3_e6'], ['ir_k7_e3'], ['ir_k7_e6'], ['ir_k7_e6'], ['ir_k7_e3'], ['ir_k7_e3'], ['ir_k7_e3'], ['ir_k7_e3'], ['ir_k7_e3'], ['ir_k7_e3'], ['ir_k7_e3'], ['skip'], ['ir_k7_e3'], ['ir_k7_e6'], ['ir_k7_e3']], 'block_cfg': {'stages': [[[6, 32, 1, 2]], [[6, 32, 1, 1]], [[3, 32, 1, 1]], [[3, 32, 1, 1]], [[3, 32, 1, 1]], [[3, 32, 1, 1]], [[6, 64, 1, 2]], [[3, 64, 1, 1]], [[3, 64, 1, 1]], [[3, 64, 1, 1]], [[3, 64, 1, 1]], [[3, 64, 1, 1]], [[3, 64, 1, 1]], [[3, 64, 1, 1]], [[6, 96, 1, 2]], [[6, 96, 1, 1]], [[6, 96, 1, 1]], [[3, 96, 1, 1]], [[3, 96, 1, 1]], [[6, 96, 1, 1]], [[3, 96, 1, 1]], [[6, 96, 1, 1]], [[6, 96, 1, 1]], [[3, 96, 1, 1]], [[3, 160, 1, 1]], [[3, 160, 1, 1]], [[3, 160, 1, 1]], [[3, 160, 1, 1]], [[3, 160, 1, 1]], [[3, 160, 1, 1]], [[1, 160, 1, 1]], [[3, 160, 1, 1]], [[6, 160, 1, 1]], [[3, 160, 1, 1]]]}}
+
+2021-01-22 03:41:51,065 => loading model from /home/zwq/workspace/Pose/model_checkpoint/mpii/PoseNAS-B/final_state.pth
+2021-01-22 03:41:53,799 => load 2958 samples

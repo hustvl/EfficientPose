@@ -23,7 +23,9 @@ DATASET:
   TEST_SET: valid
   TRAIN_SET: train
 MODEL:
-  NAME: 'pose_nasnet'
+  NAME: 'pose_efficient'
+  ARCH: 'EfficientPose-C'
+  IN_CHANNELS: 24
   PRETRAINED: ""
   IMAGE_SIZE:
   - 256
@@ -64,11 +66,11 @@ TRAIN:
   MOMENTUM: 0.9
   NESTEROV: false
 TEST:
-  BATCH_SIZE_PER_GPU: 64
+  BATCH_SIZE_PER_GPU: 16
   BBOX_THRE: 1.0
   IMAGE_THRE: 0.0
   IN_VIS_THRE: 0.2
-  MODEL_FILE: ''
+  MODEL_FILE: "model_checkpoint/mpii/EfficientPose-C/final_state.pth"
   NMS_THRE: 1.0
   OKS_THRE: 0.9
   FLIP_TEST: true
