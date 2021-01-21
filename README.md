@@ -1,6 +1,6 @@
 # EfficientPose
 
-The code of the paper [EfﬁcientPose: Efﬁcient Human Pose Estimation with Neural Architecture Search](https://baidu.com)
+The inference code of the paper [EfﬁcientPose: Efﬁcient Human Pose Estimation with Neural Architecture Search](https://arxiv.org/abs/2012.07086)
 
 We propose an efﬁcient framework targeted at human pose estimation including two parts, the efﬁcient backbone and the efﬁcient head. We use NAS(Neural architecture search)  technology to obtain lightweight backbone.  For the efﬁcient head, we slim the transposed convolutions and propose a spatial information correction module to promote the performance of the ﬁnal prediction.  
 
@@ -40,3 +40,5 @@ We propose an efﬁcient framework targeted at human pose estimation including t
 #### Results on COCO test2017
 
 ![coco_results](imgs/coco_results.png)
+
+
