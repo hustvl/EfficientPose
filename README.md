@@ -15,7 +15,7 @@ We propose an efﬁcient framework targeted at human pose estimation including t
 
 ## Main Results
 
-- model & training log can be found in our model_zoo(https://drive.google.com/drive/folders/1nKbolvot_TJW6Q_SjfUVGWyMTNcGmesc?usp=sharing)
+- model & training log can be found in our [model_zoo](https://drive.google.com/drive/folders/1nKbolvot_TJW6Q_SjfUVGWyMTNcGmesc?usp=sharing)
 
 #### Results on MPII val
 
