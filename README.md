@@ -39,4 +39,4 @@ We propose an efﬁcient framework targeted at human pose estimation including t
 
 #### Results on COCO test2017
 
-![overall_fig](imgs/coco_results.png)
+![coco_results](imgs/coco_results.png)
