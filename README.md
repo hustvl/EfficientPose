@@ -41,4 +41,8 @@ We propose an efﬁcient framework targeted at human pose estimation including t
 
 ![coco_results](imgs/coco_results.png)
 
+## Acknowledgement
+
+We thank for open-source implementation of [HRNet](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch).
+
 
